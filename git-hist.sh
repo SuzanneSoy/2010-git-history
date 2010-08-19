@@ -21,7 +21,7 @@ if [ -z "$file" -o "$file" == "--help" -o "$file" == "-h" ]; then
 fi
 
 statusbar() {
-	echo -e "\e[47m\e[K[$i / $max] : ${rev[i]}\e[1000G\e[46D\e[1mh\e[47m : help  \e[1mp\e[47m,\e[1m-\e[47m : previous  \e[1mn\e[47m,\e[1m+\e[47m : next  \e[1mq\e[47m : quit \e[m"
+	echo -e "\e[47m\e[K[$(($i+1)) / $(($max+1))] : ${rev[i]}\e[1000G\e[46D\e[1mh\e[47m : help  \e[1mp\e[47m,\e[1m-\e[47m : previous  \e[1mn\e[47m,\e[1m+\e[47m : next  \e[1mq\e[47m : quit \e[m"
 }
 
 page=0
