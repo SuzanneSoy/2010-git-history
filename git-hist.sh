@@ -14,8 +14,9 @@
 #     * git whatchanged --follow galerie-index.php | grep '^\(:\|commit \)'
 
 file="$1"
-if [ -z $file ]; then
+if [ -z "$file" -o "$file" == "--help" -o "$file" == "-h" ]; then
 	echo "Usage : $0 filename"
+	echo "You must be in a directory versionned with git for this to work."
 	exit 1
 fi
 
