@@ -28,6 +28,6 @@ I've been looking for a tool that would visually "replay" the programmer's work,
 1. See the evolution of the whole project.
 2. See the evolution of the contents of a single file.
 
-[Gource](http://code.google.com/p/gource/) provides a soluion for aim #1, and apple's "time machine" seems to provide something somehow related. But both seem to work with a granularity of files & folders, which is too big for aim #2 (I want to see the acual code being modified).
+[Gource](http://code.google.com/p/gource/) provides a soluion for aim #1, and Apple's "time machine" (Mac OS X) seems to provide something somehow related. But both seem to work with a granularity of files & folders, which is too big for aim #2 (I want to see the acual code being modified).
 
 So I created a short script that allows you to navigate through the different versions of a single file.
