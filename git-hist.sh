@@ -10,8 +10,8 @@
 #     * use emacs
 #     * choose from one of the above by guessing from $EDITOR and what's installed on the system.
 # * doesn't seem to include pre-rename versions of a file that was renamed.
-#     * git log --follow --name-only --oneline galerie-index.php
-#     * git whatchanged --follow galerie-index.php | grep '^\(:\|commit \)'
+#     * git log --follow --name-only --oneline $file
+#     * git whatchanged --follow $file | grep '^\(:\|commit \)'
 
 file="$1"
 if [ -z "$file" -o "$file" == "--help" -o "$file" == "-h" ]; then
