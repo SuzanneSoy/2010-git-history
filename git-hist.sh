@@ -51,7 +51,7 @@ help() {
 	echo -e "\e[1mq\e[m   : quit"
 }
 
-fullpath="$(git ls-files --full-name "$file")"
+fullpath="$(git ls-files --full-name "$file" | head -n 1)"
 i=0
 for ab in $(git log --oneline "$file" | cut -d ' ' -f 1 | tac); do
 	rev[i]="$ab"
