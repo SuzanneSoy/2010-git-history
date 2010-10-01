@@ -37,9 +37,11 @@ show() {
 }
 
 help() {
+	local garbage
 	clear
 	statusbar
 	echo -e "status line : [version i / of total] : sha1"
+	echo ""
 	echo -e "\e[1mh\e[m   : help"
 	echo -e "\e[1mp\e[m,\e[1m-\e[m : previous version"
 	echo -e "\e[1mn\e[m,\e[1m+\e[m : next version"
@@ -49,6 +51,9 @@ help() {
 	echo -e "\e[1mu\e[m   : scroll up"
 	echo -e "\e[1mt\e[m   : scroll to top"
 	echo -e "\e[1mq\e[m   : quit"
+	echo ""
+	echo "Press any key to hide this help."
+	read -n 1 garbage
 }
 
 fullpath="$(git ls-files --full-name "$file" | head -n 1)"
@@ -71,7 +76,7 @@ while read -n 1 ab; do
 		"d") page=$((page+1)) ;;
 		"u") page=$((page-1)); [ "$i" -lt 0 ] && i=0 ;;
 		"t") page=0 ;;
-		"h") help; continue ;;
+		"h") help ;;
 		"q") break ;;
 	esac
 	show
