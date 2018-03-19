@@ -24,7 +24,7 @@ Dependencies
 Background
 ----------
 
-I've been looking for a tool that would visually "replay" the programmer's work, like a 24h/24 screencast of his editor, but fast forward. The aim is to :
+I've been looking for a tool that would visually "replay" the programmer's work, like a 24h/24 screencast of their editor, but played at an accelerated speed. The aim is to :
 1. See the evolution of the whole project.
 2. See the evolution of the contents of a single file.
 
